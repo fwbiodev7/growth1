@@ -30,7 +30,7 @@ $categorias = listarCategorias();
     />
 
     <title>Growth Falso - Início</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon1.png" />
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -99,7 +99,7 @@ $categorias = listarCategorias();
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-black dark group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <?php include 'nav.php'; ?>
+        <?php include 'navuser.php'; ?>
 
         <div id="carouselExample" class="carousel slide custom-carousel" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -150,7 +150,7 @@ $categorias = listarCategorias();
                                 <p class="product-card-description"><?= htmlspecialchars($produto['produto_descricao']); ?></p>
                                 <p class="product-card-price">R$ <?= number_format($produto['produto_preco'], 2, ',', '.'); ?></p>
                                 <small class="product-card-category">Categoria: <?= htmlspecialchars($produto['categoria_nome']); ?></small>
-                                <a href="detalhesuser.php?id=<?= $produto['produto_id']; ?>" 
+                                <a href="detalhes.php?id=<?= $produto['produto_id']; ?>" 
                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-3 mt-auto 
                                           bg-[#e9242a] text-white text-sm font-bold leading-normal tracking-[0.015em] 
                                           hover:bg-[#d01c25] active:scale-95 transition-all duration-200 ease-in-out">

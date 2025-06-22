@@ -5,13 +5,13 @@
     if ($id) {
         $produtos = ListarProdutosDetalhes($id);
     } else {
-        header('Location: indexuser.php');
+        header('Location: index.php');
         exit;
     }
     if ($id) {
         $produtos = ListarProdutosDetalhes($id);
     } else {
-        header('Location: indexadm.php');
+        header('Location: indexuser.php');
         exit;
     }
 ?>
@@ -225,7 +225,7 @@ $pagina_atual = basename($_SERVER['PHP_SELF']);
                                             <input type="hidden" name="produto_id" value="<?= htmlspecialchars($produto['produto_id']); ?>">
                                             <input type="hidden" name="quantidade" value="1">
                                             <button type="submit" class="btn-custom-comprar">
-                                                <i class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho
+                                                <a href="login.php"><i class="fa-solid fa-cart-shopping"></i> Faça login para poder comprar! 
                                             </button>
                                         </form>
                                     </div>
